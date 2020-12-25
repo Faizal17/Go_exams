@@ -27,6 +27,7 @@ func jump(nums []int) int {
 	// if nums[0] == 0 {
 	// 	return ans[len(ans)-1]
 	// }
+
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; (j <= i+nums[i]) && (j < len(nums)); j++ {
 			ans[j] = int(math.Min(float64(ans[j]), float64(ans[i]+1)))
